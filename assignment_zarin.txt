@@ -1,0 +1,56 @@
+import numpy as np
+from matplotlib import pyplot as plt
+import pandas as pd
+import matplotlib.pyplot as plt
+
+data = pd.read_csv("E:\DataAnal_Andrew\zdata.csv")
+
+Sr = data['Sr (in ppm)']
+Y = data['Y (in ppm)']
+SiO2=data['SiO2']
+Sr_Y=data['Sr/Y']
+CaO=data['CaO']
+K2O=data['K2O']
+Rb=data['Rb']
+
+data
+
+ss = 50
+
+s1 = plt.scatter(SiO2,Sr_Y,c='r',s=ss)
+# plt.xlim(50.00,80.00)
+# plt.ylim(0,700)
+plt.xlabel('SiO2 (in %)')
+plt.ylabel('Sr/Y')
+
+
+s2 = plt.scatter(SiO2,Sr,s=ss)
+#plt.xlim(50,80)
+#plt.ylim(400,700)
+plt.xlabel('SiO2 (in %)')
+plt.ylabel('Sr(in ppm)')
+
+
+s3 = plt.scatter(SiO2,CaO,s=ss)
+# plt.xlim(50,80)
+# plt.ylim(0,9)
+plt.xlabel('SiO2 (in %)')
+plt.ylabel('CaO')
+
+
+
+s4 = plt.scatter(SiO2,K2O,s=ss)
+# plt.xlim(50,80)
+# plt.ylim(0,2)
+plt.xlabel('SiO2 (in %)')
+plt.ylabel('K2O')
+
+
+
+s5 = plt.scatter(SiO2,Rb,s=ss)
+# plt.xlim(50,80)
+# plt.ylim(0,50)
+plt.xlabel('SiO2 (in %)')
+plt.ylabel('Rb')
+
+
